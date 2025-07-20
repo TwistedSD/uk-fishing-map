@@ -9,7 +9,7 @@
     "markType": "Shingle Beach",
     "latitude": "50.9131° N",
     "longitude": "0.9662° E",
-    "targetableSpecies": ["cod", "whiting", "bass", "plaice", "sole", "mackerel"]
+    "targetableSpecies": ["cod", "whiting", "bass", "plaice", "sole", "mackerel", "dogfish_lesser_spotted", "thornback_ray"]
   },
   {
     "id": "samphire_hoe",
@@ -21,7 +21,7 @@
     "markType": "Sea Wall",
     "latitude": "51.1056° N",
     "longitude": "1.2750° E",
-    "targetableSpecies": ["cod", "bass", "ballan_wrasse", "pollack", "mackerel"]
+    "targetableSpecies": ["cod", "bass", "ballan_wrasse", "pollack", "mackerel", "conger_eel", "dogfish_lesser_spotted"]
   },
   {
     "id": "southend_pier",
@@ -33,7 +33,7 @@
     "markType": "Pier",
     "latitude": "51.5120° N",
     "longitude": "0.7180° E",
-    "targetableSpecies": ["bass", "thornback_ray", "whiting", "flounder", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["bass", "thornback_ray", "whiting", "flounder", "dogfish_lesser_spotted", "sole"]
   },
   {
     "id": "chesil_beach_abbotsbury",
@@ -45,7 +45,7 @@
     "markType": "Shingle Beach",
     "latitude": "50.6592° N",
     "longitude": "-2.6163° W",
-    "targetableSpecies": ["cod", "plaice", "thornback_ray", "mackerel", "bass", "bream_black"]
+    "targetableSpecies": ["cod", "plaice", "thornback_ray", "mackerel", "bass", "bream_black", "whiting", "smooth_hound", "bull_huss"]
   },
   {
     "id": "penlee_point",
@@ -57,7 +57,7 @@
     "markType": "Rock Mark",
     "latitude": "50.3181° N",
     "longitude": "-4.1889° W",
-    "targetableSpecies": ["pollack", "ballan_wrasse", "bass", "mackerel", "conger_eel"]
+    "targetableSpecies": ["pollack", "ballan_wrasse", "bass", "mackerel", "conger_eel", "bull_huss", "dogfish_lesser_spotted"]
   },
   {
     "id": "st_ives_harbour",
@@ -69,7 +69,7 @@
     "markType": "Harbour Wall",
     "latitude": "50.2131° N",
     "longitude": "-5.4768° W",
-    "targetableSpecies": ["mullet_thick_lipped", "pollack", "ballan_wrasse", "mackerel", "bass"]
+    "targetableSpecies": ["thick_lipped_grey_mullet", "pollack", "ballan_wrasse", "mackerel", "bass", "flounder", "conger_eel"]
   },
   {
     "id": "orford_ness",
@@ -81,7 +81,7 @@
     "markType": "Shingle Spit",
     "latitude": "52.0814° N",
     "longitude": "1.5586° E",
-    "targetableSpecies": ["bass", "cod", "whiting", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["bass", "cod", "whiting", "dogfish_lesser_spotted", "thornback_ray"]
   },
   {
     "id": "roker_pier",
@@ -93,7 +93,7 @@
     "markType": "Pier",
     "latitude": "54.9155° N",
     "longitude": "-1.3533° W",
-    "targetableSpecies": ["cod", "mackerel", "coalfish", "pollack", "flounder"]
+    "targetableSpecies": ["cod", "mackerel", "coalfish", "pollack", "flounder", "whiting", "dab"]
   },
   {
     "id": "south_shields_pier",
@@ -105,7 +105,7 @@
     "markType": "Pier",
     "latitude": "55.0112° N",
     "longitude": "-1.4115° W",
-    "targetableSpecies": ["cod", "coalfish", "mackerel", "whiting", "plaice"]
+    "targetableSpecies": ["cod", "coalfish", "mackerel", "whiting", "plaice", "pollack", "dab"]
   },
   {
     "id": "whitby_pier",
@@ -117,7 +117,7 @@
     "markType": "Pier",
     "latitude": "54.4945° N",
     "longitude": "-0.6180° W",
-    "targetableSpecies": ["cod", "coalfish", "pollack", "mackerel", "billet"]
+    "targetableSpecies": ["cod", "coalfish", "pollack", "mackerel", "whiting", "billet"]
   },
   {
     "id": "blackpool_north_pier",
@@ -129,7 +129,7 @@
     "markType": "Pier",
     "latitude": "53.8200° N",
     "longitude": "-3.0590° W",
-    "targetableSpecies": ["bass", "flounder", "dab", "whiting", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["bass", "flounder", "dab", "whiting", "dogfish_lesser_spotted", "thornback_ray"]
   },
   {
     "id": "mull_of_galloway",
@@ -141,7 +141,7 @@
     "markType": "Rock Mark",
     "latitude": "54.6351° N",
     "longitude": "-4.8563° W",
-    "targetableSpecies": ["pollack", "ballan_wrasse", "coalfish", "mackerel", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["pollack", "ballan_wrasse", "coalfish", "mackerel", "dogfish_lesser_spotted", "cod", "ling"]
   },
   {
     "id": "st_abbs_head",
@@ -177,7 +177,7 @@
     "markType": "Sandy Beach",
     "latitude": "51.5561° N",
     "longitude": "-4.1594° W",
-    "targetableSpecies": ["bass", "thornback_ray", "smooth_hound", "flounder", "plaice"]
+    "targetableSpecies": ["bass", "thornback_ray", "smooth_hound", "flounder", "plaice", "dab"]
   },
   {
     "id": "penmon_point",
@@ -189,7 +189,7 @@
     "markType": "Rock Mark",
     "latitude": "53.3109° N",
     "longitude": "-4.0409° W",
-    "targetableSpecies": ["bass", "pollack", "mackerel", "ballan_wrasse", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["bass", "pollack", "mackerel", "ballan_wrasse", "dogfish_lesser_spotted", "conger_eel"]
   },
   {
     "id": "st_govans_head",
@@ -201,7 +201,7 @@
     "markType": "Rock Mark",
     "latitude": "51.5975° N",
     "longitude": "-4.9133° W",
-    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "conger_eel"]
+    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "conger_eel", "bull_huss"]
   },
   {
     "id": "llangennith_beach",
@@ -213,7 +213,7 @@
     "markType": "Sandy Beach",
     "latitude": "51.5950° N",
     "longitude": "-4.2900° W",
-    "targetableSpecies": ["bass", "golden_grey_mullet", "flounder"]
+    "targetableSpecies": ["bass", "golden_grey_mullet", "flounder", "thornback_ray"]
   },
   {
     "id": "moelfre",
@@ -225,7 +225,7 @@
     "markType": "Rock Mark",
     "latitude": "53.3522° N",
     "longitude": "-4.2375° W",
-    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "conger_eel"]
+    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "conger_eel", "dogfish_lesser_spotted"]
   },
   {
     "id": "aberystwyth_harbour",
@@ -237,7 +237,7 @@
     "markType": "Harbour Wall",
     "latitude": "52.4130° N",
     "longitude": "-4.0895° W",
-    "targetableSpecies": ["bass", "thornback_ray", "bull_huss", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["bass", "thornback_ray", "bull_huss", "dogfish_lesser_spotted", "flounder", "dab"]
   },
   {
     "id": "brighton_marina",
@@ -249,7 +249,7 @@
     "markType": "Marina Arm",
     "latitude": "50.8115° N",
     "longitude": "-0.1030° W",
-    "targetableSpecies": ["mackerel", "bass", "bream_black", "ballan_wrasse", "mullet_thick_lipped"]
+    "targetableSpecies": ["mackerel", "bass", "bream_black", "ballan_wrasse", "mullet_thick_lipped", "conger_eel"]
   },
   {
     "id": "clacton_pier",
@@ -261,7 +261,7 @@
     "markType": "Pier",
     "latitude": "51.7845° N",
     "longitude": "1.1540° E",
-    "targetableSpecies": ["bass", "thornback_ray", "whiting", "cod", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["bass", "thornback_ray", "whiting", "cod", "dogfish_lesser_spotted", "sole"]
   },
   {
     "id": "cromer_pier",
@@ -273,7 +273,7 @@
     "markType": "Pier",
     "latitude": "52.9330° N",
     "longitude": "1.3000° E",
-    "targetableSpecies": ["cod", "bass", "whiting", "dab", "flounder"]
+    "targetableSpecies": ["cod", "bass", "whiting", "dab", "flounder", "mackerel"]
   },
   {
     "id": "lands_end",
@@ -285,7 +285,7 @@
     "markType": "Rock Mark",
     "latitude": "50.0663° N",
     "longitude": "-5.7145° W",
-    "targetableSpecies": ["pollack", "ballan_wrasse", "bass", "mackerel", "conger_eel"]
+    "targetableSpecies": ["pollack", "ballan_wrasse", "bass", "mackerel", "conger_eel", "bull_huss"]
   },
   {
     "id": "ilfracombe_pier",
@@ -297,7 +297,7 @@
     "markType": "Pier",
     "latitude": "51.2090° N",
     "longitude": "-4.1150° W",
-    "targetableSpecies": ["mackerel", "pollack", "bass", "dogfish_lesser_spotted", "conger_eel"]
+    "targetableSpecies": ["mackerel", "pollack", "bass", "dogfish_lesser_spotted", "conger_eel", "smooth_hound"]
   },
   {
     "id": "filey_brigg",
@@ -309,7 +309,7 @@
     "markType": "Rock Mark",
     "latitude": "54.2180° N",
     "longitude": "-0.2600° W",
-    "targetableSpecies": ["cod", "pollack", "coalfish", "ballan_wrasse", "mackerel"]
+    "targetableSpecies": ["cod", "pollack", "coalfish", "ballan_wrasse", "mackerel", "billet"]
   },
   {
     "id": "st_bees_head",
@@ -321,7 +321,7 @@
     "markType": "Rock Mark",
     "latitude": "54.5000° N",
     "longitude": "-3.6300° W",
-    "targetableSpecies": ["pollack", "ballan_wrasse", "cod", "mackerel", "bass"]
+    "targetableSpecies": ["pollack", "ballan_wrasse", "cod", "mackerel", "bass", "thornback_ray"]
   },
   {
     "id": "neist_point",
@@ -333,7 +333,7 @@
     "markType": "Rock Mark",
     "latitude": "57.4230° N",
     "longitude": "-6.7800° W",
-    "targetableSpecies": ["pollack", "coalfish", "mackerel", "cod", "ling"]
+    "targetableSpecies": ["pollack", "coalfish", "mackerel", "cod", "ling", "haddock"]
   },
   {
     "id": "loch_etive",
@@ -357,7 +357,7 @@
     "markType": "Rock Mark",
     "latitude": "51.5640° N",
     "longitude": "-4.3300° W",
-    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "conger_eel"]
+    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "conger_eel", "bull_huss"]
   },
   {
     "id": "llandudno_pier",
@@ -369,7 +369,7 @@
     "markType": "Pier",
     "latitude": "53.3300° N",
     "longitude": "-3.8300° W",
-    "targetableSpecies": ["mackerel", "pollack", "bass", "dogfish_lesser_spotted", "whiting"]
+    "targetableSpecies": ["mackerel", "pollack", "bass", "dogfish_lesser_spotted", "whiting", "dab", "coalfish"]
   },
   {
     "id": "portrush_harbour",
@@ -381,7 +381,7 @@
     "markType": "Harbour Wall",
     "latitude": "55.2060° N",
     "longitude": "-6.6580° W",
-    "targetableSpecies": ["pollack", "coalfish", "mackerel", "dogfish_lesser_spotted", "flounder"]
+    "targetableSpecies": ["pollack", "coalfish", "mackerel", "dogfish_lesser_spotted", "flounder", "cod"]
   },
   {
     "id": "deal_pier",
@@ -393,7 +393,7 @@
     "markType": "Pier",
     "latitude": "51.2240° N",
     "longitude": "1.4050° E",
-    "targetableSpecies": ["bass", "cod", "whiting", "thornback_ray", "mackerel"]
+    "targetableSpecies": ["bass", "cod", "whiting", "thornback_ray", "mackerel", "sole", "dogfish_lesser_spotted"]
   },
   {
     "id": "aldeburgh_beach",
@@ -405,7 +405,7 @@
     "markType": "Shingle Beach",
     "latitude": "52.1500° N",
     "longitude": "1.6000° E",
-    "targetableSpecies": ["cod", "bass", "whiting", "sole", "thornback_ray"]
+    "targetableSpecies": ["cod", "bass", "whiting", "sole", "thornback_ray", "dogfish_lesser_spotted"]
   },
   {
     "id": "start_point",
@@ -417,7 +417,7 @@
     "markType": "Rock Mark",
     "latitude": "50.2220° N",
     "longitude": "-3.6400° W",
-    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "bull_huss"]
+    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "bull_huss", "conger_eel"]
   },
   {
     "id": "porthcawl_pier",
@@ -429,7 +429,7 @@
     "markType": "Pier",
     "latitude": "51.4780° N",
     "longitude": "-3.7010° W",
-    "targetableSpecies": ["conger_eel", "bass", "thornback_ray", "smooth_hound", "cod"]
+    "targetableSpecies": ["conger_eel", "bass", "thornback_ray", "smooth_hound", "cod", "dogfish_lesser_spotted"]
   },
   {
     "id": "eyemouth_harbour",
@@ -441,7 +441,7 @@
     "markType": "Harbour Wall",
     "latitude": "55.8740° N",
     "longitude": "-2.0880° W",
-    "targetableSpecies": ["cod", "coalfish", "flounder", "mackerel", "pollack"]
+    "targetableSpecies": ["cod", "coalfish", "flounder", "mackerel", "pollack", "whiting"]
   },
   {
     "id": "seahouses_north_pier",
@@ -453,7 +453,7 @@
     "markType": "Pier",
     "latitude": "55.5850° N",
     "longitude": "-1.6490° W",
-    "targetableSpecies": ["cod", "coalfish", "pollack", "flounder", "mackerel"]
+    "targetableSpecies": ["cod", "coalfish", "pollack", "flounder", "mackerel", "whiting"]
   },
   {
     "id": "walney_island",
@@ -465,7 +465,7 @@
     "markType": "Sandy Beach",
     "latitude": "54.1300° N",
     "longitude": "-3.2700° W",
-    "targetableSpecies": ["bass", "plaice", "flounder", "dab", "thornback_ray"]
+    "targetableSpecies": ["bass", "plaice", "flounder", "dab", "thornback_ray", "cod"]
   },
   {
     "id": "portland_bill",
@@ -477,7 +477,7 @@
     "markType": "Rock Mark",
     "latitude": "50.5150° N",
     "longitude": "-2.4580° W",
-    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "conger_eel", "bull_huss"]
+    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "conger_eel", "bull_huss", "mackerel"]
   },
   {
     "id": "newquay_harbour",
@@ -489,7 +489,7 @@
     "markType": "Harbour Wall",
     "latitude": "50.4150° N",
     "longitude": "-5.0900° W",
-    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "mullet_thick_lipped", "bass"]
+    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "mullet_thick_lipped", "bass", "conger_eel"]
   },
   {
     "id": "aberdeen_beach",
@@ -501,7 +501,7 @@
     "markType": "Sandy Beach",
     "latitude": "57.1550° N",
     "longitude": "-2.0750° W",
-    "targetableSpecies": ["cod", "flounder", "dab", "bass", "turbot"]
+    "targetableSpecies": ["cod", "flounder", "dab", "bass", "turbot", "coalfish"]
   },
   {
     "id": "penarth_pier",
@@ -513,7 +513,7 @@
     "markType": "Pier",
     "latitude": "51.4370° N",
     "longitude": "-3.1680° W",
-    "targetableSpecies": ["cod", "whiting", "bass", "conger_eel", "thornback_ray"]
+    "targetableSpecies": ["cod", "whiting", "bass", "conger_eel", "thornback_ray", "smooth_hound"]
   },
   {
     "id": "bangor_pier",
@@ -525,7 +525,7 @@
     "markType": "Pier",
     "latitude": "53.2350° N",
     "longitude": "-4.1180° W",
-    "targetableSpecies": ["bass", "mackerel", "dogfish_lesser_spotted", "whiting", "dab"]
+    "targetableSpecies": ["bass", "mackerel", "dogfish_lesser_spotted", "whiting", "dab", "thornback_ray"]
   },
   {
     "id": "belfast_lough",
@@ -537,7 +537,7 @@
     "markType": "Sea Lough",
     "latitude": "54.7150° N",
     "longitude": "-5.8000° W",
-    "targetableSpecies": ["cod", "whiting", "coalfish", "dogfish_lesser_spotted", "flounder"]
+    "targetableSpecies": ["cod", "whiting", "coalfish", "dogfish_lesser_spotted", "flounder", "pollack"]
   },
   {
     "id": "soutwold_pier",
@@ -549,7 +549,7 @@
     "markType": "Pier",
     "latitude": "52.3280° N",
     "longitude": "1.6850° E",
-    "targetableSpecies": ["bass", "cod", "whiting", "thornback_ray", "sole"]
+    "targetableSpecies": ["bass", "cod", "whiting", "thornback_ray", "sole", "dogfish_lesser_spotted"]
   },
   {
     "id": "lyme_regis_cobb",
@@ -561,7 +561,7 @@
     "markType": "Harbour Wall",
     "latitude": "50.7190° N",
     "longitude": "-2.9350° W",
-    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "conger_eel", "bass"]
+    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "conger_eel", "bass", "dogfish_lesser_spotted"]
   },
   {
     "id": "flamborough_head",
@@ -573,7 +573,7 @@
     "markType": "Rock Mark",
     "latitude": "54.1160° N",
     "longitude": "-0.0800° W",
-    "targetableSpecies": ["cod", "pollack", "coalfish", "ballan_wrasse", "mackerel"]
+    "targetableSpecies": ["cod", "pollack", "coalfish", "ballan_wrasse", "mackerel", "ling"]
   },
   {
     "id": "ullapool_pier",
@@ -585,7 +585,7 @@
     "markType": "Pier",
     "latitude": "57.8960° N",
     "longitude": "-5.1600° W",
-    "targetableSpecies": ["mackerel", "coalfish", "pollack", "cod", "haddock"]
+    "targetableSpecies": ["mackerel", "coalfish", "pollack", "cod", "haddock", "dogfish_lesser_spotted"]
   },
   {
     "id": "tenby_harbour",
@@ -597,7 +597,7 @@
     "markType": "Harbour Wall",
     "latitude": "51.6710° N",
     "longitude": "-4.6980° W",
-    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "mackerel", "pollack"]
+    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "mackerel", "pollack", "ballan_wrasse"]
   },
   {
     "id": "donaghadee_harbour",
@@ -609,7 +609,7 @@
     "markType": "Harbour Wall",
     "latitude": "54.6460° N",
     "longitude": "-5.5300° W",
-    "targetableSpecies": ["pollack", "coalfish", "mackerel", "cod", "ballan_wrasse"]
+    "targetableSpecies": ["pollack", "coalfish", "mackerel", "cod", "ballan_wrasse", "dogfish_lesser_spotted"]
   },
   {
     "id": "sunderland_point",
@@ -621,7 +621,7 @@
     "markType": "Estuary",
     "latitude": "54.0400° N",
     "longitude": "-2.8900° W",
-    "targetableSpecies": ["flounder", "bass", "eel", "whiting", "cod"]
+    "targetableSpecies": ["flounder", "bass", "eel", "whiting", "cod", "thornback_ray"]
   },
   {
     "id": "skegness_beach",
@@ -633,7 +633,7 @@
     "markType": "Sandy Beach",
     "latitude": "53.1450° N",
     "longitude": "0.3500° E",
-    "targetableSpecies": ["bass", "whiting", "dab", "flounder", "cod"]
+    "targetableSpecies": ["bass", "whiting", "dab", "flounder", "cod", "thornback_ray"]
   },
   {
     "id": "lizard_point",
@@ -645,7 +645,7 @@
     "markType": "Rock Mark",
     "latitude": "49.9590° N",
     "longitude": "-5.2100° W",
-    "targetableSpecies": ["pollack", "ballan_wrasse", "bass", "conger_eel", "bull_huss"]
+    "targetableSpecies": ["pollack", "ballan_wrasse", "bass", "conger_eel", "bull_huss", "mackerel"]
   },
   {
     "id": "fraserburgh_harbour",
@@ -657,7 +657,7 @@
     "markType": "Harbour Wall",
     "latitude": "57.6950° N",
     "longitude": "-2.0000° W",
-    "targetableSpecies": ["cod", "coalfish", "flounder", "mackerel", "pollack"]
+    "targetableSpecies": ["cod", "coalfish", "flounder", "mackerel", "pollack", "whiting"]
   },
   {
     "id": "barry_island",
@@ -669,7 +669,7 @@
     "markType": "Rock Mark",
     "latitude": "51.3900° N",
     "longitude": "-3.2500° W",
-    "targetableSpecies": ["bass", "conger_eel", "smooth_hound", "thornback_ray", "cod"]
+    "targetableSpecies": ["bass", "conger_eel", "smooth_hound", "thornback_ray", "cod", "whiting"]
   },
   {
     "id": "portstewart_strand",
@@ -693,7 +693,7 @@
     "markType": "Pier",
     "latitude": "51.3750° N",
     "longitude": "1.1280° E",
-    "targetableSpecies": ["bass", "thornback_ray", "whiting", "dogfish_lesser_spotted", "sole"]
+    "targetableSpecies": ["bass", "thornback_ray", "whiting", "dogfish_lesser_spotted", "sole", "mackerel"]
   },
   {
     "id": "weymouth_harbour",
@@ -705,7 +705,7 @@
     "markType": "Harbour Wall",
     "latitude": "50.6080° N",
     "longitude": "-2.4500° W",
-    "targetableSpecies": ["mullet_thick_lipped", "bass", "pollack", "pouting", "flounder"]
+    "targetableSpecies": ["mullet_thick_lipped", "bass", "pollack", "pouting", "flounder", "conger_eel"]
   },
   {
     "id": "saltburn_pier",
@@ -717,7 +717,7 @@
     "markType": "Pier",
     "latitude": "54.5870° N",
     "longitude": "-0.9750° W",
-    "targetableSpecies": ["cod", "whiting", "coalfish", "flounder", "dab"]
+    "targetableSpecies": ["cod", "whiting", "coalfish", "flounder", "dab", "mackerel"]
   },
   {
     "id": "oban_harbour",
@@ -729,7 +729,7 @@
     "markType": "Harbour Wall",
     "latitude": "56.4150° N",
     "longitude": "-5.4750° W",
-    "targetableSpecies": ["pollack", "coalfish", "mackerel", "dogfish_lesser_spotted", "whiting"]
+    "targetableSpecies": ["pollack", "coalfish", "mackerel", "dogfish_lesser_spotted", "whiting", "haddock"]
   },
   {
     "id": "burry_port_harbour",
@@ -741,7 +741,7 @@
     "markType": "Harbour Wall",
     "latitude": "51.6800° N",
     "longitude": "-4.2500° W",
-    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "dogfish_lesser_spotted", "whiting"]
+    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "dogfish_lesser_spotted", "whiting", "conger_eel"]
   },
   {
     "id": "portpatrick_harbour",
@@ -753,7 +753,7 @@
     "markType": "Harbour Wall",
     "latitude": "54.8420° N",
     "longitude": "-5.1180° W",
-    "targetableSpecies": ["pollack", "coalfish", "ballan_wrasse", "mackerel", "dogfish_lesser_spotted"]
+    "targetableSpecies": ["pollack", "coalfish", "ballan_wrasse", "mackerel", "dogfish_lesser_spotted", "cod"]
   },
   {
     "id": "sennen_cove",
@@ -765,7 +765,7 @@
     "markType": "Sandy Beach",
     "latitude": "50.0750° N",
     "longitude": "-5.6950° W",
-    "targetableSpecies": ["bass", "plaice", "turbot", "ray_blonde", "ray_small_eyed"]
+    "targetableSpecies": ["bass", "plaice", "turbot", "ray_blonde", "ray_small_eyed", "thornback_ray"]
   },
   {
     "id": "cleethorpes_beach",
@@ -777,7 +777,7 @@
     "markType": "Sandy Beach",
     "latitude": "53.5600° N",
     "longitude": "-0.0200° W",
-    "targetableSpecies": ["whiting", "cod", "flounder", "dab", "bass"]
+    "targetableSpecies": ["whiting", "cod", "flounder", "dab", "bass", "thornback_ray"]
   },
   {
     "id": "holyhead_breakwater",
@@ -789,7 +789,7 @@
     "markType": "Breakwater",
     "latitude": "53.3250° N",
     "longitude": "-4.6400° W",
-    "targetableSpecies": ["pollack", "ballan_wrasse", "mackerel", "bull_huss", "conger_eel"]
+    "targetableSpecies": ["pollack", "ballan_wrasse", "mackerel", "bull_huss", "conger_eel", "dogfish_lesser_spotted"]
   },
   {
     "id": "isle_of_skye_uig",
@@ -801,7 +801,7 @@
     "markType": "Pier",
     "latitude": "57.5880° N",
     "longitude": "-6.3650° W",
-    "targetableSpecies": ["mackerel", "pollack", "coalfish", "dogfish_lesser_spotted", "cod"]
+    "targetableSpecies": ["mackerel", "pollack", "coalfish", "dogfish_lesser_spotted", "cod", "haddock"]
   },
   {
     "id": "new_brighton_pier",
@@ -813,7 +813,7 @@
     "markType": "Pier",
     "latitude": "53.4400° N",
     "longitude": "-3.0350° W",
-    "targetableSpecies": ["cod", "whiting", "dab", "flounder", "bass"]
+    "targetableSpecies": ["cod", "whiting", "dab", "flounder", "bass", "thornback_ray"]
   },
   {
     "id": "plymouth_sound",
@@ -825,7 +825,7 @@
     "markType": "Breakwater",
     "latitude": "50.3600° N",
     "longitude": "-4.1400° W",
-    "targetableSpecies": ["mackerel", "pollack", "bass", "ballan_wrasse", "garfish"]
+    "targetableSpecies": ["mackerel", "pollack", "bass", "ballan_wrasse", "garfish", "bream_black"]
   },
   {
     "id": "llanddwyn_island",
@@ -837,7 +837,7 @@
     "markType": "Rock Mark",
     "latitude": "53.1380° N",
     "longitude": "-4.4100° W",
-    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "bull_huss", "thornback_ray"]
+    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "bull_huss", "thornback_ray", "conger_eel"]
   },
   {
     "id": "lossiemouth_east_beach",
@@ -849,7 +849,7 @@
     "markType": "Sandy Beach",
     "latitude": "57.7200° N",
     "longitude": "-3.2700° W",
-    "targetableSpecies": ["bass", "flounder", "turbot", "cod", "seatrout"]
+    "targetableSpecies": ["bass", "flounder", "turbot", "cod", "seatrout", "coalfish"]
   },
   {
     "id": "bognor_regis_pier",
@@ -861,7 +861,7 @@
     "markType": "Pier",
     "latitude": "50.7800° N",
     "longitude": "-0.6750° W",
-    "targetableSpecies": ["bass", "bream_black", "mackerel", "thornback_ray", "smooth_hound"]
+    "targetableSpecies": ["bass", "bream_black", "mackerel", "thornback_ray", "smooth_hound", "plaice"]
   },
   {
     "id": "torquay_harbour",
@@ -873,7 +873,7 @@
     "markType": "Harbour Wall",
     "latitude": "50.4600° N",
     "longitude": "-3.5250° W",
-    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "mullet_thick_lipped", "pouting"]
+    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "mullet_thick_lipped", "pouting", "bass"]
   },
   {
     "id": "hartlepool_heugh_pier",
@@ -885,7 +885,7 @@
     "markType": "Pier",
     "latitude": "54.6950° N",
     "longitude": "-1.1750° W",
-    "targetableSpecies": ["cod", "coalfish", "whiting", "flounder", "mackerel"]
+    "targetableSpecies": ["cod", "coalfish", "whiting", "flounder", "mackerel", "pollack"]
   },
   {
     "id": "gairloch_beach",
@@ -897,7 +897,7 @@
     "markType": "Sandy Beach",
     "latitude": "57.7250° N",
     "longitude": "-5.7000° W",
-    "targetableSpecies": ["pollack", "mackerel", "dogfish_lesser_spotted", "flounder", "dab"]
+    "targetableSpecies": ["pollack", "mackerel", "dogfish_lesser_spotted", "flounder", "dab", "coalfish"]
   },
   {
     "id": "newport_parrog",
@@ -909,7 +909,7 @@
     "markType": "Estuary",
     "latitude": "52.0200° N",
     "longitude": "-4.8400° W",
-    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "seatrout", "salmon"]
+    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "seatrout", "salmon", "whiting"]
   },
   {
     "id": "strangford_lough",
@@ -921,7 +921,7 @@
     "markType": "Sea Lough",
     "latitude": "54.3800° N",
     "longitude": "-5.5500° W",
-    "targetableSpecies": ["pollack", "coalfish", "cod", "whiting", "thornback_ray"]
+    "targetableSpecies": ["pollack", "coalfish", "cod", "whiting", "thornback_ray", "dogfish_lesser_spotted"]
   },
   {
     "id": "folkestone_harbour_arm",
@@ -933,7 +933,7 @@
     "markType": "Harbour Wall",
     "latitude": "51.0780° N",
     "longitude": "1.1880° E",
-    "targetableSpecies": ["bass", "mackerel", "pollack", "ballan_wrasse", "cod"]
+    "targetableSpecies": ["bass", "mackerel", "pollack", "ballan_wrasse", "cod", "dogfish_lesser_spotted"]
   },
   {
     "id": "paignton_pier",
@@ -945,7 +945,7 @@
     "markType": "Pier",
     "latitude": "50.4350° N",
     "longitude": "-3.5550° W",
-    "targetableSpecies": ["mackerel", "pollack", "garfish", "bass", "whiting"]
+    "targetableSpecies": ["mackerel", "pollack", "garfish", "bass", "whiting", "pouting"]
   },
   {
     "id": "amble_pier",
@@ -957,7 +957,7 @@
     "markType": "Pier",
     "latitude": "55.3350° N",
     "longitude": "-1.5700° W",
-    "targetableSpecies": ["cod", "coalfish", "flounder", "mackerel", "pollack"]
+    "targetableSpecies": ["cod", "coalfish", "flounder", "mackerel", "pollack", "dab"]
   },
   {
     "id": "stonehaven_harbour",
@@ -969,7 +969,7 @@
     "markType": "Harbour Wall",
     "latitude": "56.9600° N",
     "longitude": "-2.2000° W",
-    "targetableSpecies": ["cod", "coalfish", "pollack", "mackerel", "ballan_wrasse"]
+    "targetableSpecies": ["cod", "coalfish", "pollack", "mackerel", "ballan_wrasse", "flounder"]
   },
   {
     "id": "aberdaron_beach",
@@ -981,7 +981,7 @@
     "markType": "Sandy Beach",
     "latitude": "52.8050° N",
     "longitude": "-4.7150° W",
-    "targetableSpecies": ["bass", "pollack", "bull_huss", "thornback_ray", "mackerel"]
+    "targetableSpecies": ["bass", "pollack", "bull_huss", "thornback_ray", "mackerel", "bream_black"]
   },
   {
     "id": "giants_causeway",
@@ -993,7 +993,7 @@
     "markType": "Rock Mark",
     "latitude": "55.2400° N",
     "longitude": "-6.5100° W",
-    "targetableSpecies": ["pollack", "coalfish", "ballan_wrasse", "cod", "mackerel"]
+    "targetableSpecies": ["pollack", "coalfish", "ballan_wrasse", "cod", "mackerel", "ling"]
   },
   {
     "id": "lowestoft_south_pier",
@@ -1005,7 +1005,7 @@
     "markType": "Pier",
     "latitude": "52.4700° N",
     "longitude": "1.7550° E",
-    "targetableSpecies": ["cod", "whiting", "bass", "sole", "flounder"]
+    "targetableSpecies": ["cod", "whiting", "bass", "sole", "flounder", "thornback_ray"]
   },
   {
     "id": "mevagissey_harbour",
@@ -1017,7 +1017,7 @@
     "markType": "Harbour Wall",
     "latitude": "50.2700° N",
     "longitude": "-4.7850° W",
-    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "conger_eel", "mullet_thick_lipped"]
+    "targetableSpecies": ["mackerel", "pollack", "ballan_wrasse", "conger_eel", "mullet_thick_lipped", "bass"]
   },
   {
     "id": "scarborough_marine_drive",
@@ -1029,7 +1029,7 @@
     "markType": "Sea Wall",
     "latitude": "54.2900° N",
     "longitude": "-0.3900° W",
-    "targetableSpecies": ["cod", "pollack", "coalfish", "mackerel", "whiting"]
+    "targetableSpecies": ["cod", "pollack", "coalfish", "mackerel", "whiting", "ballan_wrasse"]
   },
   {
     "id": "kyle_of_tongue",
@@ -1041,7 +1041,7 @@
     "markType": "Sea Loch",
     "latitude": "58.5300° N",
     "longitude": "-4.4200° W",
-    "targetableSpecies": ["seatrout", "salmon", "flounder", "pollack", "coalfish"]
+    "targetableSpecies": ["seatrout", "salmon", "flounder", "pollack", "coalfish", "cod"]
   },
   {
     "id": "cardiff_barrage",
@@ -1053,7 +1053,7 @@
     "markType": "Barrage",
     "latitude": "51.4500° N",
     "longitude": "-3.1600° W",
-    "targetableSpecies": ["bass", "mullet_thick_lipped", "flounder", "conger_eel", "whiting"]
+    "targetableSpecies": ["bass", "mullet_thick_lipped", "flounder", "conger_eel", "whiting", "cod"]
   },
   {
     "id": "isle_of_man_peel",
@@ -1065,7 +1065,7 @@
     "markType": "Breakwater",
     "latitude": "54.2250° N",
     "longitude": "-4.7000° W",
-    "targetableSpecies": ["mackerel", "pollack", "coalfish", "ballan_wrasse", "callig"]
+    "targetableSpecies": ["mackerel", "pollack", "coalfish", "ballan_wrasse", "callig", "cod"]
   },
   {
     "id": "teignmouth_pier",
@@ -1077,7 +1077,7 @@
     "markType": "Pier",
     "latitude": "50.5450° N",
     "longitude": "-3.4900° W",
-    "targetableSpecies": ["mackerel", "garfish", "bass", "plaice", "whiting"]
+    "targetableSpecies": ["mackerel", "garfish", "bass", "plaice", "whiting", "dogfish_lesser_spotted"]
   },
   {
     "id": "berwick_breakwater",
@@ -1089,7 +1089,7 @@
     "markType": "Breakwater",
     "latitude": "55.7750° N",
     "longitude": "-1.9850° W",
-    "targetableSpecies": ["cod", "coalfish", "pollack", "mackerel", "flounder"]
+    "targetableSpecies": ["cod", "coalfish", "pollack", "mackerel", "flounder", "whiting"]
   },
   {
     "id": "stornoway_harbour",
@@ -1101,7 +1101,7 @@
     "markType": "Harbour Wall",
     "latitude": "58.2080° N",
     "longitude": "-6.3850° W",
-    "targetableSpecies": ["pollack", "coalfish", "mackerel", "cod", "haddock"]
+    "targetableSpecies": ["pollack", "coalfish", "mackerel", "cod", "haddock", "whiting"]
   },
   {
     "id": "solva_harbour",
@@ -1113,7 +1113,7 @@
     "markType": "Harbour Wall",
     "latitude": "51.8700° N",
     "longitude": "-5.1900° W",
-    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "mullet_thick_lipped"]
+    "targetableSpecies": ["bass", "pollack", "ballan_wrasse", "mackerel", "mullet_thick_lipped", "flounder"]
   },
   {
     "id": "isle_of_wight_sandown",
@@ -1125,7 +1125,7 @@
     "markType": "Pier",
     "latitude": "50.6550° N",
     "longitude": "-1.1500° W",
-    "targetableSpecies": ["bass", "bream_black", "mackerel", "thornback_ray", "smooth_hound"]
+    "targetableSpecies": ["bass", "bream_black", "mackerel", "thornback_ray", "smooth_hound", "plaice"]
   },
   {
     "id": "falmouth_pendennis",
@@ -1137,7 +1137,7 @@
     "markType": "Rock Mark",
     "latitude": "50.1450° N",
     "longitude": "-5.0500° W",
-    "targetableSpecies": ["pollack", "ballan_wrasse", "mackerel", "bass", "garfish"]
+    "targetableSpecies": ["pollack", "ballan_wrasse", "mackerel", "bass", "garfish", "conger_eel"]
   },
   {
     "id": "bridlington_harbour",
@@ -1149,7 +1149,7 @@
     "markType": "Harbour Wall",
     "latitude": "54.0800° N",
     "longitude": "-0.1900° W",
-    "targetableSpecies": ["cod", "whiting", "flounder", "dab", "mackerel"]
+    "targetableSpecies": ["cod", "whiting", "flounder", "dab", "mackerel", "pollack"]
   },
   {
     "id": "dunnet_head",
@@ -1161,7 +1161,7 @@
     "markType": "Rock Mark",
     "latitude": "58.6700° N",
     "longitude": "-3.3750° W",
-    "targetableSpecies": ["cod", "pollack", "coalfish", "ling", "ballan_wrasse"]
+    "targetableSpecies": ["cod", "pollack", "coalfish", "ling", "ballan_wrasse", "tusk"]
   },
   {
     "id": "porthmadog_cob",
@@ -1173,7 +1173,7 @@
     "markType": "Sea Wall",
     "latitude": "52.9250° N",
     "longitude": "-4.1300° W",
-    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "dogfish_lesser_spotted", "whiting"]
+    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "dogfish_lesser_spotted", "whiting", "thornback_ray"]
   },
   {
     "id": "bude_breakwater",
@@ -1185,7 +1185,7 @@
     "markType": "Breakwater",
     "latitude": "50.8300° N",
     "longitude": "-4.5550° W",
-    "targetableSpecies": ["bass", "mackerel", "pollack", "flounder", "mullet_thick_lipped"]
+    "targetableSpecies": ["bass", "mackerel", "pollack", "flounder", "mullet_thick_lipped", "ballan_wrasse"]
   },
   {
     "id": "cairnryan_pier",
@@ -1197,18 +1197,18 @@
     "markType": "Pier",
     "latitude": "54.9750° N",
     "longitude": "-5.0300° W",
-    "targetableSpecies": ["dogfish_lesser_spotted", "thornback_ray", "whiting", "cod", "pollack"]
+    "targetableSpecies": ["dogfish_lesser_spotted", "thornback_ray", "whiting", "cod", "pollack", "coalfish"]
   },
   {
-    "id": " Saundersfoot_harbour",
-    "name": " Saundersfoot Harbour",
+    "id": "saundersfoot_harbour",
+    "name": "Saundersfoot Harbour",
     "region": "Wales",
     "county": "Pembrokeshire",
     "country": "Wales",
-    "nearestTown": " Saundersfoot",
+    "nearestTown": "Saundersfoot",
     "markType": "Harbour Wall",
     "latitude": "51.7080° N",
     "longitude": "-4.7000° W",
-    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "mackerel", "pollack"]
+    "targetableSpecies": ["bass", "flounder", "mullet_thick_lipped", "mackerel", "pollack", "ballan_wrasse"]
   }
 ]
