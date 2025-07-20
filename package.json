@@ -1,0 +1,8 @@
+{
+  "name": "uk-fishing-map",
+  "version": "1.0.0",
+  "description": "A map for UK coastal fishing spots.",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
