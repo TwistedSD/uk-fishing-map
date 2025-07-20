@@ -1,0 +1,271 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background-color: #0d47a1;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1001;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
+
+/* Main Content Area */
+main {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Map Container Styles */
+#map {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+    z-index: 1;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    width: 380px;
+    max-width: 90%;
+    background-color: white;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.15);
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+}
+
+#sidebar.sidebar-hidden {
+    transform: translateX(100%);
+}
+
+#sidebar-content {
+    padding: 20px;
+}
+
+#close-sidebar-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+#close-sidebar-btn:hover {
+    color: #000;
+}
+
+/* General Info Section Styles */
+.info-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.info-section:last-child {
+    border-bottom: none;
+}
+.info-section h3 {
+    margin-top: 0;
+    color: #0d47a1;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Forecast Toggle Buttons */
+.forecast-toggle {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.forecast-toggle button {
+    background: #f8f9fa;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 0.7em;
+    color: #555;
+    border-left: 1px solid #ccc;
+}
+.forecast-toggle button:first-child {
+    border-left: none;
+}
+.forecast-toggle button.active {
+    background: #0d47a1;
+    color: white;
+}
+
+/* Weather Forecast Styles */
+.weather-forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+.weather-card {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85em;
+    border: 1px solid #e9ecef;
+}
+.weather-card p {
+    margin: 4px 0;
+}
+.weather-card .day {
+    font-weight: bold;
+}
+
+/* Tide Table Styles */
+.tide-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+.tide-table th, .tide-table td {
+    text-align: left;
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+}
+.tide-table th {
+    font-weight: bold;
+    color: #333;
+}
+.tide-table .tide-type-high {
+    color: #c92a2a;
+    font-weight: 500;
+}
+.tide-table .tide-type-low {
+    color: #0d47a1;
+    font-weight: 500;
+}
+
+/* Species Grid (Location View) */
+#species-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.species-card {
+    text-align: center;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 5px;
+    transition: background-color 0.2s;
+}
+.species-card:hover, .species-card:focus {
+    background-color: #f0f8ff;
+    outline: 2px solid #0d47a1;
+}
+
+.species-card img {
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    box-sizing: border-box;
+}
+.species-card p {
+    margin: 5px 0 0;
+    font-weight: 500;
+}
+
+/* --- Fish Detail View Styles --- */
+.back-button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: #0d47a1;
+    cursor: pointer;
+    padding: 5px 10px 15px 0;
+}
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.fish-title {
+    margin: 0 0 5px 0;
+    color: #1a237e;
+}
+.fish-subtitle {
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+.fish-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.info-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+.info-section li {
+    margin-bottom: 5px;
+}
+
+/* Leaflet Popup Customization */
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+}
+.leaflet-popup-content {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+    header p {
+        font-size: 0.8em;
+    }
+}
