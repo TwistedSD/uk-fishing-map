@@ -246,6 +246,29 @@ main {
     margin-bottom: 5px;
 }
 
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 0;
+    text-align: center;
+    z-index: 1001; /* Ensure it's above the map */
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+
 /* Leaflet Popup Customization */
 .leaflet-popup-content-wrapper {
     border-radius: 8px;
@@ -267,5 +290,9 @@ main {
     }
     header p {
         font-size: 0.8em;
+    }
+    footer {
+        flex-direction: column;
+        gap: 5px;
     }
 }
