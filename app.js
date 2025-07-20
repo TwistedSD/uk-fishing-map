@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- CONFIGURATION ---
-    // IMPORTANT: Get a free API key from the ADMIRALTY API Portal and add it here.
-    const ADMIRALTY_API_KEY = '22908b7166314e88930df43c9dd43ec1';
-
     // --- DOM ELEMENT REFERENCES ---
     const sidebar = document.getElementById('sidebar');
     const closeSidebarBtn = document.getElementById('close-sidebar-btn');
@@ -39,10 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- DATA LOADING ---
     async function loadData() {
         try {
+            // The API call for stations is now a serverless function.
             const [fishResponse, locationsResponse, stationsResponse] = await Promise.all([
                 fetch('fish.json'),
                 fetch('locations.json'),
-                fetch('https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations', { headers: { 'Ocp-Apim-Subscription-Key': ADMIRALTY_API_KEY }})
+                fetch('/.netlify/functions/get-stations')
             ]);
 
             if (!fishResponse.ok || !locationsResponse.ok) throw new Error('Could not load local data files.');
@@ -59,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             initializeMarkers();
         } catch (error) {
             console.error('Failed to load data:', error);
-            sidebarContent.innerHTML = `<h2>Error</h2><p>Could not load essential fishing data. Please check the console and ensure your API key is correct.</p>`;
+            sidebarContent.innerHTML = `<h2>Error</h2><p>Could not load essential fishing data. Please check the console. If you are running this locally, the Netlify serverless functions may not work.</p>`;
             sidebar.classList.remove('sidebar-hidden');
         }
     }
@@ -85,36 +82,20 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebarContent.innerHTML = `
             <h2 id="location-name">${location.name}</h2>
             <p id="location-description">${description}</p>
-            
             <div class="info-section" id="weather-section">
-                <h3>
-                    <span>Weather</span>
-                    <div class="forecast-toggle" id="weather-toggle">
-                        <button class="active" data-days="1">1 Day</button>
-                        <button data-days="7">7 Day</button>
-                    </div>
-                </h3>
+                <h3><span>Weather</span><div class="forecast-toggle" id="weather-toggle"><button class="active" data-days="1">1 Day</button><button data-days="7">7 Day</button></div></h3>
                 <div id="weather-content"><p>Loading weather...</p></div>
             </div>
-
             <div class="info-section" id="tide-section">
-                 <h3>
-                    <span>Tide Predictions</span>
-                    <div class="forecast-toggle" id="tide-toggle">
-                        <button class="active" data-days="1">1 Day</button>
-                        <button data-days="7">7 Day</button>
-                    </div>
-                </h3>
+                 <h3><span>Tide Predictions</span><div class="forecast-toggle" id="tide-toggle"><button class="active" data-days="1">1 Day</button><button data-days="7">7 Day</button></div></h3>
                 <div id="tide-content"><p>Loading tides...</p></div>
             </div>
-
             <div class="info-section" id="species-section"><h3>Likely Catches</h3><div id="species-grid"></div></div>
             <div class="info-section" id="regulations-section"><h3>Regulations</h3><p>Always check local and national regulations before fishing.</p></div>
         `;
         
         updateSpeciesGrid(location);
         addEventListeners(location);
-
         const lat = parseCoord(location.latitude);
         const lon = parseCoord(location.longitude);
         fetchAndDisplayWeather(lat, lon, 1);
@@ -125,18 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateSpeciesGrid(location) {
         const speciesGrid = document.getElementById('species-grid');
         if(!speciesGrid) return;
-        
         let speciesHtml = '';
         location.targetableSpecies.forEach(speciesId => {
             const fish = fishData.get(speciesId);
             if (fish) {
                 const imageUrl = `https://placehold.co/100x100/e3f2fd/0d47a1?text=${encodeURIComponent(fish.commonName)}`;
-                speciesHtml += `
-                    <div class="species-card" data-fish-id="${fish.id}" role="button" tabindex="0">
-                        <img src="${imageUrl}" alt="${fish.commonName}" onerror="this.onerror=null;this.src='https://placehold.co/100x100/cccccc/333333?text=Error';">
-                        <p>${fish.commonName}</p>
-                    </div>
-                `;
+                speciesHtml += `<div class="species-card" data-fish-id="${fish.id}" role="button" tabindex="0"><img src="${imageUrl}" alt="${fish.commonName}" onerror="this.onerror=null;this.src='https://placehold.co/100x100/cccccc/333333?text=Error';"><p>${fish.commonName}</p></div>`;
             }
         });
         speciesGrid.innerHTML = speciesHtml;
@@ -145,10 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function addEventListeners(location) {
         const lat = parseCoord(location.latitude);
         const lon = parseCoord(location.longitude);
-
         document.getElementById('weather-toggle')?.addEventListener('click', (e) => handleToggle(e, (days) => fetchAndDisplayWeather(lat, lon, days)));
         document.getElementById('tide-toggle')?.addEventListener('click', (e) => handleToggle(e, (days) => fetchAndDisplayTides(lat, lon, days)));
-        
         sidebarContent.querySelectorAll('.species-card').forEach(card => {
             card.addEventListener('click', () => showFishDetails(card.dataset.fishId));
             card.addEventListener('keydown', (e) => {
@@ -170,10 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function showFishDetails(fishId) {
         const fish = fishData.get(fishId);
         if (!fish) return;
-
         const createList = (items) => items && items.length > 0 ? `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>` : '<p>None specified.</p>';
         const imageUrl = `https://placehold.co/600x400/e3f2fd/0d47a1?text=${encodeURIComponent(fish.commonName)}`;
-
         sidebarContent.innerHTML = `
             <button id="back-to-mark-btn" class="back-button">← Back to Mark</button>
             <div class="fish-detail-view">
@@ -200,25 +171,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const weatherEl = document.getElementById('weather-content');
         if (!weatherEl) return;
         weatherEl.innerHTML = '<p>Fetching weather...</p>';
-
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,windspeed_10m_max&forecast_days=${days}&timezone=auto`;
-        
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Weather data not available.');
             const data = await response.json();
-            
             let html = '<div class="weather-forecast-grid">';
             for (let i = 0; i < data.daily.time.length; i++) {
                 const date = new Date(data.daily.time[i]);
                 const day = i === 0 ? 'Today' : date.toLocaleDateString('en-GB', { weekday: 'short' });
-                html += `
-                    <div class="weather-card">
-                        <p class="day">${day}</p>
-                        <p>${Math.round(data.daily.temperature_2m_max[i])}°C</p>
-                        <p>${Math.round(data.daily.windspeed_10m_max[i])} kph</p>
-                    </div>
-                `;
+                html += `<div class="weather-card"><p class="day">${day}</p><p>${Math.round(data.daily.temperature_2m_max[i])}°C</p><p>${Math.round(data.daily.windspeed_10m_max[i])} kph</p></div>`;
             }
             html += '</div>';
             weatherEl.innerHTML = html;
@@ -231,17 +193,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const tideEl = document.getElementById('tide-content');
         if (!tideEl) return;
         tideEl.innerHTML = '<p>Finding nearest tide station...</p>';
-
-        if (ADMIRALTY_API_KEY === 'YOUR_ADMIRALTY_API_KEY') {
-            tideEl.innerHTML = `<p>Please add a valid ADMIRALTY API key to app.js to get tide predictions.</p>`;
-            return;
-        }
         if (ukhoStations.length === 0) {
-            tideEl.innerHTML = `<p>Tide station data is unavailable. Check API key and network.</p>`;
+            tideEl.innerHTML = `<p>Tide station data is unavailable.</p>`;
             return;
         }
-
-        // Find nearest station
         let nearestStation = null;
         let minDistance = Infinity;
         ukhoStations.forEach(station => {
@@ -252,30 +207,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 nearestStation = station;
             }
         });
-
         if (!nearestStation) {
             tideEl.innerHTML = `<p>Could not find a nearby tide station.</p>`;
             return;
         }
-
         tideEl.innerHTML = `<p>Getting predictions for ${nearestStation.properties.Name}...</p>`;
         const stationId = nearestStation.properties.Id;
-        const url = `https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/${stationId}/TidalEvents?duration=${days}`;
-
+        
+        // This is now a serverless function call.
+        const url = `/.netlify/functions/get-tides?stationId=${stationId}&days=${days}`;
         try {
-            const response = await fetch(url, { headers: { 'Ocp-Apim-Subscription-Key': ADMIRALTY_API_KEY }});
+            const response = await fetch(url);
             if (!response.ok) throw new Error(`Tidal data not available for this station (Status: ${response.status}).`);
             const data = await response.json();
-
-            if(data.length === 0) {
+            if (data.length === 0) {
                 tideEl.innerHTML = `<p>No tide predictions available for ${nearestStation.properties.Name}.</p>`;
                 return;
             }
-
-            let html = `<p style="font-size:0.8em; margin-bottom: 8px;">From ${nearestStation.properties.Name}</p>`;
-            html += '<table class="tide-table">';
+            let html = `<p style="font-size:0.8em; margin-bottom: 8px;">From ${nearestStation.properties.Name}</p><table class="tide-table">`;
             let currentDate = '';
-
             data.forEach(event => {
                 const eventDate = new Date(event.DateTime).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
                 if (eventDate !== currentDate) {
@@ -284,13 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 const time = new Date(event.DateTime).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
                 const typeClass = event.EventType === 'HighWater' ? 'tide-type-high' : 'tide-type-low';
-                html += `
-                    <tr>
-                        <td class="${typeClass}">${event.EventType === 'HighWater' ? 'High' : 'Low'}</td>
-                        <td>${time}</td>
-                        <td>${event.Height.toFixed(2)} m</td>
-                    </tr>
-                `;
+                html += `<tr><td class="${typeClass}">${event.EventType === 'HighWater' ? 'High' : 'Low'}</td><td>${time}</td><td>${event.Height.toFixed(2)} m</td></tr>`;
             });
             html += '</table>';
             tideEl.innerHTML = html;
