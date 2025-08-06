@@ -1,8 +1,6 @@
-// This is a serverless function that fetches tidal event predictions for a specific station.
+import fetch from 'node-fetch';
 
-const fetch = require('node-fetch');
-
-exports.handler = async function(event, context) {
+export const handler = async function(event, context) {
     const { stationId, days } = event.queryStringParameters;
     const API_KEY = process.env.ADMIRALTY_API_KEY;
     const API_URL = `https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/${stationId}/TidalEvents?duration=${days}`;

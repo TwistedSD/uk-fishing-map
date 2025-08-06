@@ -1,9 +1,6 @@
-// This is a serverless function that will run on Netlify.
-// It securely fetches the list of tide stations from the ADMIRALTY API.
+import fetch from 'node-fetch';
 
-const fetch = require('node-fetch');
-
-exports.handler = async function(event, context) {
+export const handler = async function(event, context) {
     const API_KEY = process.env.ADMIRALTY_API_KEY;
     const API_URL = 'https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations';
 
