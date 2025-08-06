@@ -1,9 +1,16 @@
 {
-  "name": "uk-fishing-map",
+  "name": "netlify-blobs-example",
   "version": "1.0.0",
-  "description": "A map for UK coastal fishing spots.",
-  "dependencies": {
-    "@netlify/blobs": "10.0.0"
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@netlify/blobs": "10.0.8"
+  }
 }
