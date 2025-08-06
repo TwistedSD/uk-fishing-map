@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function updateVisitCounter() {
         const counterEl = document.getElementById('visit-counter');
         try {
-            const response = await fetch('/.netlify/functions/count');
+            const response = await fetch('api/count');
             if (!response.ok) {
                 throw new Error('Failed to fetch visit count');
             }
