@@ -50,6 +50,33 @@ document.addEventListener('DOMContentLoaded', () => {
         return '❓'; // Default case
     }
 
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // --- DOM ELEMENT REFERENCES ---
+    const visitCounterElement = document.getElementById('visit-counter');
+    // ... other element references
+
+    // --- API & DYNAMIC CONTENT FUNCTIONS ---
+
+    // New function to fetch and display the visit count
+    async function updateVisitCounter() {
+        if (!visitCounterElement) return;
+        try {
+            const response = await fetch('/.netlify/functions/get-and-update-counter');
+            if (!response.ok) throw new Error('Counter response not OK');
+            const data = await response.json();
+            visitCounterElement.textContent = data.count.toLocaleString('en-US');
+        } catch (error) {
+            visitCounterElement.textContent = 'N/A';
+            console.error('Could not update visit counter:', error);
+        }
+    }
+
+    // --- INITIALIZATION ---
+    loadData();
+    updateVisitCounter(); // Call the new function on page load
+});
+
     // --- DATA LOADING ---
     async function loadData() {
         try {
