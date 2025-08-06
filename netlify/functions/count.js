@@ -1,6 +1,6 @@
-const { getStore } = require("@netlify/blobs");
+import { getStore } from "@netlify/blobs";
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
     try {
         const store = getStore("visits");
         let visitCount = await store.get("count", { type: "json" }) || { count: 0 };
