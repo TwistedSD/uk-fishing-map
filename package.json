@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "A map for UK coastal fishing spots.",
   "dependencies": {
-    "@netlify/blobs": "^10.0.8",
-    "node-fetch": "^2.6.1"
+    "@netlify/blobs": "^10.0.8"
   },
   "type": "module"
 }

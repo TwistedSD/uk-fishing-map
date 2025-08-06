@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export const handler = async function(event, context) {
     const API_KEY = process.env.ADMIRALTY_API_KEY;
     const API_URL = 'https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations';

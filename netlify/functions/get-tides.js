@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export const handler = async function(event, context) {
     const { stationId, days } = event.queryStringParameters;
     const API_KEY = process.env.ADMIRALTY_API_KEY;
