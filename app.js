@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const weatherEl = document.getElementById('weather-content');
         if (!weatherEl) return;
         weatherEl.innerHTML = '<p>Fetching weather...</p>';
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,windspeed_10m_max&forecast_days=${days}&timezone=auto`;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code&hourly=temperature_2m,precipitation&wind_speed_unit=mph`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Weather data not available.');
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < data.daily.time.length; i++) {
                 const date = new Date(data.daily.time[i]);
                 const day = i === 0 ? 'Today' : date.toLocaleDateString('en-GB', { weekday: 'short' });
-                html += `<div class="weather-card"><p class="day">${day}</p><p>${Math.round(data.daily.temperature_2m_max[i])}°C</p><p>${Math.round(data.daily.windspeed_10m_max[i])} kph</p></div>`;
+                html += `<div class="weather-card"><p class="day">${day}</p><p class="weather-icon"><img src="https://openweathermap.org/img/wn/${data.daily.weather_code[i]}.png">${day}</p><p>${Math.round(data.daily.temperature_2m_max[i])}°C</p><p>${Math.round(data.daily.windspeed_10m_max[i])} kph</p></div>`;
             }
             html += '</div>';
             weatherEl.innerHTML = html;
