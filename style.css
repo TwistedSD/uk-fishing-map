@@ -148,6 +148,10 @@ main {
 .weather-card .day {
     font-weight: bold;
 }
+.weather-card .weather-icon {
+    font-size: 2em;
+    margin: 8px 0;
+}
 
 /* Tide Table Styles */
 .tide-table {

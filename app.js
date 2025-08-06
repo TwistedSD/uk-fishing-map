@@ -32,6 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
         return value;
     }
 
+    /**
+     * Converts a WMO weather code into a display icon.
+     * @param {number} wmoCode The weather code from the API.
+     * @returns {string} An emoji representing the weather.
+     */
+    function getWeatherIcon(wmoCode) {
+        if (wmoCode === 0) return '☀️'; // Clear sky
+        if (wmoCode >= 1 && wmoCode <= 3) return '☁️'; // Mainly clear, partly cloudy, overcast
+        if (wmoCode >= 45 && wmoCode <= 48) return '🌫️'; // Fog
+        if (wmoCode >= 51 && wmoCode <= 57) return '🌦️'; // Drizzle
+        if (wmoCode >= 61 && wmoCode <= 67) return '🌧️'; // Rain
+        if (wmoCode >= 71 && wmoCode <= 77) return '❄️'; // Snow
+        if (wmoCode >= 80 && wmoCode <= 82) return '🌧️'; // Rain showers (Corrected)
+        if (wmoCode >= 85 && wmoCode <= 86) return '🌨️'; // Snow showers
+        if (wmoCode >= 95 && wmoCode <= 99) return '⛈️'; // Thunderstorm
+        return '❓'; // Default case
+    }
+
     // --- DATA LOADING ---
     async function loadData() {
         try {
@@ -171,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const weatherEl = document.getElementById('weather-content');
         if (!weatherEl) return;
         weatherEl.innerHTML = '<p>Fetching weather...</p>';
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code&hourly=temperature_2m,precipitation&wind_speed_unit=mph`;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,windspeed_10m_max&forecast_days=${days}&timezone=auto`;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Weather data not available.');
@@ -180,7 +198,21 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < data.daily.time.length; i++) {
                 const date = new Date(data.daily.time[i]);
                 const day = i === 0 ? 'Today' : date.toLocaleDateString('en-GB', { weekday: 'short' });
-                html += `<div class="weather-card"><p class="day">${day}</p><p class="weather-icon"><img src="https://openweathermap.org/img/wn/${data.daily.weather_code[i]}.png">${day}</p><p>${Math.round(data.daily.temperature_2m_max[i])}°C</p><p>${Math.round(data.daily.windspeed_10m_max[i])} kph</p></div>`;
+
+                // 1. Get the weather icon
+                const icon = getWeatherIcon(data.daily.weathercode[i]);
+
+                // 2. Convert wind speed from kph to mph (1 kph = 0.621371 mph)
+                const windMph = Math.round(data.daily.windspeed_10m_max[i] * 0.621371);
+
+                // 3. Update the HTML string with the icon and new wind speed
+                html += `
+                    <div class="weather-card">
+                        <p class="day">${day}</p>
+                        <p class="weather-icon">${icon}</p>
+                        <p>${Math.round(data.daily.temperature_2m_max[i])}°C</p>
+                        <p>${windMph} mph</p>
+                    </div>`;
             }
             html += '</div>';
             weatherEl.innerHTML = html;
