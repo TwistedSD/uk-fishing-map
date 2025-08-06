@@ -32,6 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return value;
     }
 
+    // Add this new function to handle the visit counter
+    async function updateVisitCounter() {
+        const counterEl = document.getElementById('visit-counter');
+        try {
+            const response = await fetch('/.netlify/functions/count');
+            if (!response.ok) {
+                throw new Error('Failed to fetch visit count');
+            }
+            const data = await response.json();
+            counterEl.textContent = data.count;
+        } catch (error) {
+            counterEl.textContent = 'N/A';
+            console.error('Error fetching visit count:', error);
+        }
+    }
+
     /**
      * Converts a WMO weather code into a display icon.
      * @param {number} wmoCode The weather code from the API.
@@ -278,7 +294,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- GLOBAL EVENT LISTENERS ---
     closeSidebarBtn.addEventListener('click', () => sidebar.classList.add('sidebar-hidden'));
     map.on('click', () => sidebar.classList.add('sidebar-hidden'));
-
+    
     // --- INITIALIZATION ---
     loadData();
+
+    updateVisitCounter();
 });
