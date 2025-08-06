@@ -1,7 +1,0 @@
-# This tells Netlify where your serverless functions are located.
-[build]
-  functions = "netlify/functions"
-
-# This enables the Blob store and names it 'visit_counts'
-[[blobs]]
-  storeName = "visit_counts"
